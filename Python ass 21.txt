@@ -1,0 +1,88 @@
+lst = [5, 6, 7, 8, 9]
+def next_in_line(lst,num):
+    if len(lst) > 0 :
+        lst.append(num)
+        return lst[1:]
+    else:
+        print("'No list has been selected'")
+
+***************************************************
+next_in_line([5, 6, 7, 8, 9], 1)
+
+**********************************************
+next_in_line([1, 10, 20, 42 ], 6)
+
+********************************************
+next_in_line([], 6)
+******************************
+def get_budgets(listDict):
+    sum = 0
+    for dc in listDict:
+        for k,v in dc.items():
+            if k == 'budget':
+                sum = sum + v
+    return sum
+
+****************************************
+get_budgets([
+{ 'name': 'John', 'age': 21, 'budget': 23000 },
+{ 'name': 'Steve', 'age': 32, 'budget': 40000 },
+{ 'name': 'Martin', 'age': 16, 'budget': 2700 }
+])
+
+***************************************************
+get_budgets([
+{ 'name': 'John', 'age': 21, 'budget': 29000 },
+{ 'name': 'Steve', 'age': 32, 'budget': 32000 },
+{ 'name': 'Martin', 'age': 16, 'budget': 1600 }
+])
+
+**************************************************
+def alphabet_soup(str):
+    return ''.join(sorted(str))
+*************************************
+alphabet_soup('hello')
+
+*****************************
+alphabet_soup('edabit')
+
+***************************
+alphabet_soup('hacker')
+****************************
+alphabet_soup('geek')
+**************************
+alphabet_soup('javascript')
+
+********************************
+def compound_interest(amt, years, intrest, compPeriod):
+    future_value = amt *(1 + (intrest/compPeriod)) ** (years * compPeriod)
+    return round(future_value,2)
+
+******************************************
+compound_interest(100, 1, 0.05, 1)
+
+************************************
+compound_interest(3500, 15, 0.1, 4)
+
+***********************************
+compound_interest(100000, 20, 0.15, 365)
+
+*************************************************
+def return_only_integer(lst):
+    int_list = []
+    for i in lst:
+        if type(i) == int:
+            int_list.append(i)
+    return int_list
+
+*******************************************
+return_only_integer([9, 2, 'space', 'car', 'lion', 16])
+
+*******************************************************
+return_only_integer(['hello', 81, 'basketball', 123, 'fox'])
+
+****************************************************************
+return_only_integer([10, '121', 56, 20, 'car', 3, 'lion'])
+
+*******************************************************************
+return_only_integer(['String', True, 3.3, 1])
