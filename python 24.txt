@@ -1,0 +1,64 @@
+def amplify(n):
+    return [i*10 if i % 4 == 0 else i for i in range(1,n+1) ]
+
+
+amplify(4)
+
+amplify(3)
+
+print(amplify(25))
+
+def unique(lst):
+    s = list(set(lst))
+    for i in s:
+        if lst.count(i) == 1:
+            return i
+
+unique([3, 3, 3, 7, 3, 3])
+
+unique([0, 0, 0.77, 0, 0])
+
+unique([0, 1, 1, 1, 1, 1, 1, 1])
+
+class Circle():
+    def __init__(self, r):
+        self.radius = r
+
+    def getArea(self):
+        return round(self.radius**2*3.14)
+    
+    def getPerimeter(self):
+        return round(2*self.radius*3.14)
+
+circy = Circle(11)
+circy.getArea()
+
+circy = Circle(4.44)
+circy.getPerimeter()
+
+def sort_by_length(lst):
+    return sorted(lst, key = len)
+
+sort_by_length(['Google', 'Apple', 'Microsoft'])
+
+sort_by_length(['Leonardo', 'Michelangelo', 'Raphael', 'Donatello'])
+
+sort_by_length(['Turing', 'Einstein', 'Jung'])
+
+def is_triplet(a,b,c):
+    lst = []
+    lst.extend((a,b,c))
+    lst = sorted(lst)
+
+    if lst[0]**2 + lst[1]**2 == lst[2]**2:
+        print('Triplets')
+        return True
+    else:
+        print("not triplet")
+        return False
+
+is_triplet(3, 4, 5)
+
+is_triplet(13, 5, 12)
+
+is_triplet(1, 2, 3)
