@@ -1,0 +1,79 @@
+def is_symmetrical(num):
+    currentDigit = reversedDigit = 0
+    remainingNum = num
+    while(remainingNum != 0):
+
+        currentDigit = remainingNum % 10
+
+        reversedDigit = reversedDigit * 10 + currentDigit
+        print('Reveresed Digit :',reversedDigit)
+        remainingNum = remainingNum // 10
+
+    if reversedDigit == num:
+        print('Num {} is symmetrical'.format(num))
+    else:
+        print('Num {} is not symmetrical'.format(num))
+
+is_symmetrical(7227)
+
+is_symmetrical(12567)
+
+is_symmetrical(44444444)
+
+is_symmetrical(9939)
+
+
+is_symmetrical(1112111)
+
+
+def multiply_nums(s):
+    s = s.replace(' ', "")
+    s = s.split(',')
+    sum = 1
+    for i in s:
+        sum = sum * int(i)
+    return sum
+
+multiply_nums('2, 3')
+
+multiply_nums('1, 2, 3, 4')
+
+multiply_nums('54, 75, 453, 0')
+
+def square_digits(num):
+    z = ''.join(str(int(i)**2) for i in str(num))
+    return int(z)
+
+square_digits(9119)
+
+square_digits(2483)
+
+square_digits(3212)
+
+
+def setify(lst):
+    return list(set(lst))
+
+setify([1, 3, 3, 5, 5])
+
+setify([4, 4, 4, 4])
+
+setify([5, 7, 8, 9, 10, 15])
+
+setify([3, 3, 3, 2, 1])
+
+def mean(n): 
+    N = len(str(n)) 
+    sum = mean = 0
+    
+    for digit in str(n):
+        sum += int(digit)       
+    return int(sum/N)
+
+mean(42)
+
+mean(12345)
+
+mean(666)
+
+
