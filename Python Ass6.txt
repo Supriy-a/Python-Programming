@@ -1,0 +1,57 @@
+#answer
+def recurfib(n):
+    if n<=1:
+        return n
+    else:
+        return recurfib(n-1) + recurfib(n-2)
+
+num = int(input("input no : "))
+
+if num <=0:
+    print("Please provide positive no.")
+
+else:
+    for i in range(num):
+        print(recurfib(i) , end=" ")
+
+
+#answer
+def fact(n):
+    if n==0:
+        return 1
+    else:
+        return n * fact(n-1)
+
+num = int(input("input a no : "))
+
+if num<0:
+    print("Enter positive no.")
+else:
+    
+        print(fact(num))
+
+
+#answer
+
+# BMI = weight / Height * height
+
+h = float(input("enter your height in feet : "))
+w = float(input("enter your weight in kilo : "))
+
+bmi = w/(h**2)
+
+print("The BIM is = ",bmi)
+
+
+#answer
+import math
+x = int(input(("Enter a number : ")))
+log = math.log(x)
+print("Log of {} is {}".format(x, log))
+
+
+num = int(input("Enter a no :"))
+sum = 0
+for i in range(1 , num+1):
+    sum = sum + i**3
+print("Cube sum of {} natural numbers is {}".format(num,sum))   
